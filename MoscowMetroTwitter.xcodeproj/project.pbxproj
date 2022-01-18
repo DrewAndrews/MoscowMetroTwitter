@@ -13,6 +13,7 @@
 		687D0DB727975B3F0096CDDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687D0DB527975B3F0096CDDD /* Main.storyboard */; };
 		687D0DB927975B460096CDDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 687D0DB827975B460096CDDD /* Assets.xcassets */; };
 		687D0DBC27975B460096CDDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687D0DBA27975B460096CDDD /* LaunchScreen.storyboard */; };
+		FE9E2F8BBC5BB663CA75BD1C /* Pods_MoscowMetroTwitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF6810DE8D80AF9300744BED /* Pods_MoscowMetroTwitter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		687D0DB827975B460096CDDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		687D0DBB27975B460096CDDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		687D0DBD27975B460096CDDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A19E5A6C5E1102DD31C2EF19 /* Pods-MoscowMetroTwitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoscowMetroTwitter.release.xcconfig"; path = "Target Support Files/Pods-MoscowMetroTwitter/Pods-MoscowMetroTwitter.release.xcconfig"; sourceTree = "<group>"; };
+		D20EBDFBE959E109D602D7D8 /* Pods-MoscowMetroTwitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoscowMetroTwitter.debug.xcconfig"; path = "Target Support Files/Pods-MoscowMetroTwitter/Pods-MoscowMetroTwitter.debug.xcconfig"; sourceTree = "<group>"; };
+		FF6810DE8D80AF9300744BED /* Pods_MoscowMetroTwitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoscowMetroTwitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE9E2F8BBC5BB663CA75BD1C /* Pods_MoscowMetroTwitter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1835AC5B11DB3DA467E5F156 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D20EBDFBE959E109D602D7D8 /* Pods-MoscowMetroTwitter.debug.xcconfig */,
+				A19E5A6C5E1102DD31C2EF19 /* Pods-MoscowMetroTwitter.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2FCCF0B4F50D3CF17631DDA5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF6810DE8D80AF9300744BED /* Pods_MoscowMetroTwitter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		687D0DA327975B3F0096CDDD = {
 			isa = PBXGroup;
 			children = (
 				687D0DAE27975B3F0096CDDD /* MoscowMetroTwitter */,
 				687D0DAD27975B3F0096CDDD /* Products */,
+				1835AC5B11DB3DA467E5F156 /* Pods */,
+				2FCCF0B4F50D3CF17631DDA5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 687D0DC027975B460096CDDD /* Build configuration list for PBXNativeTarget "MoscowMetroTwitter" */;
 			buildPhases = (
+				7D438E7F26A08F0EE294EBC3 /* [CP] Check Pods Manifest.lock */,
 				687D0DA827975B3F0096CDDD /* Sources */,
 				687D0DA927975B3F0096CDDD /* Frameworks */,
 				687D0DAA27975B3F0096CDDD /* Resources */,
+				DA331993C0A6D5DD537FA08B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7D438E7F26A08F0EE294EBC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoscowMetroTwitter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA331993C0A6D5DD537FA08B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoscowMetroTwitter/Pods-MoscowMetroTwitter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoscowMetroTwitter/Pods-MoscowMetroTwitter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MoscowMetroTwitter/Pods-MoscowMetroTwitter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		687D0DA827975B3F0096CDDD /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		687D0DC127975B460096CDDD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D20EBDFBE959E109D602D7D8 /* Pods-MoscowMetroTwitter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +382,7 @@
 		};
 		687D0DC227975B460096CDDD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A19E5A6C5E1102DD31C2EF19 /* Pods-MoscowMetroTwitter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

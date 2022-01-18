@@ -1,0 +1,6 @@
+framework module Pods_MoscowMetroTwitter {
+  umbrella header "Pods-MoscowMetroTwitter-umbrella.h"
+
+  export *
+  module * { export * }
+}
