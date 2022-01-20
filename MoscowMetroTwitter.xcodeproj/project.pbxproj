@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		687D0DB027975B3F0096CDDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687D0DAF27975B3F0096CDDD /* AppDelegate.swift */; };
 		687D0DB227975B3F0096CDDD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687D0DB127975B3F0096CDDD /* SceneDelegate.swift */; };
-		687D0DB427975B3F0096CDDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687D0DB327975B3F0096CDDD /* ViewController.swift */; };
 		687D0DB727975B3F0096CDDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687D0DB527975B3F0096CDDD /* Main.storyboard */; };
 		687D0DB927975B460096CDDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 687D0DB827975B460096CDDD /* Assets.xcassets */; };
 		687D0DBC27975B460096CDDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687D0DBA27975B460096CDDD /* LaunchScreen.storyboard */; };
+		68C7BF68279763CE0034BCB7 /* TwitterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C7BF66279763CE0034BCB7 /* TwitterTableViewController.swift */; };
+		68C7BF6E279841890034BCB7 /* TwitterPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C7BF6C279841890034BCB7 /* TwitterPostCell.swift */; };
+		68C7BF6F279841890034BCB7 /* TwitterPostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68C7BF6D279841890034BCB7 /* TwitterPostCell.xib */; };
 		FE9E2F8BBC5BB663CA75BD1C /* Pods_MoscowMetroTwitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF6810DE8D80AF9300744BED /* Pods_MoscowMetroTwitter.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,11 +22,13 @@
 		687D0DAC27975B3F0096CDDD /* MoscowMetroTwitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoscowMetroTwitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		687D0DAF27975B3F0096CDDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		687D0DB127975B3F0096CDDD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		687D0DB327975B3F0096CDDD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		687D0DB627975B3F0096CDDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		687D0DB827975B460096CDDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		687D0DBB27975B460096CDDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		687D0DBD27975B460096CDDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68C7BF66279763CE0034BCB7 /* TwitterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterTableViewController.swift; sourceTree = "<group>"; };
+		68C7BF6C279841890034BCB7 /* TwitterPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterPostCell.swift; sourceTree = "<group>"; };
+		68C7BF6D279841890034BCB7 /* TwitterPostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwitterPostCell.xib; sourceTree = "<group>"; };
 		A19E5A6C5E1102DD31C2EF19 /* Pods-MoscowMetroTwitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoscowMetroTwitter.release.xcconfig"; path = "Target Support Files/Pods-MoscowMetroTwitter/Pods-MoscowMetroTwitter.release.xcconfig"; sourceTree = "<group>"; };
 		D20EBDFBE959E109D602D7D8 /* Pods-MoscowMetroTwitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoscowMetroTwitter.debug.xcconfig"; path = "Target Support Files/Pods-MoscowMetroTwitter/Pods-MoscowMetroTwitter.debug.xcconfig"; sourceTree = "<group>"; };
 		FF6810DE8D80AF9300744BED /* Pods_MoscowMetroTwitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoscowMetroTwitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,7 +52,6 @@
 				D20EBDFBE959E109D602D7D8 /* Pods-MoscowMetroTwitter.debug.xcconfig */,
 				A19E5A6C5E1102DD31C2EF19 /* Pods-MoscowMetroTwitter.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,11 +86,13 @@
 			children = (
 				687D0DAF27975B3F0096CDDD /* AppDelegate.swift */,
 				687D0DB127975B3F0096CDDD /* SceneDelegate.swift */,
-				687D0DB327975B3F0096CDDD /* ViewController.swift */,
+				68C7BF66279763CE0034BCB7 /* TwitterTableViewController.swift */,
 				687D0DB527975B3F0096CDDD /* Main.storyboard */,
 				687D0DB827975B460096CDDD /* Assets.xcassets */,
 				687D0DBA27975B460096CDDD /* LaunchScreen.storyboard */,
 				687D0DBD27975B460096CDDD /* Info.plist */,
+				68C7BF6C279841890034BCB7 /* TwitterPostCell.swift */,
+				68C7BF6D279841890034BCB7 /* TwitterPostCell.xib */,
 			);
 			path = MoscowMetroTwitter;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				687D0DBC27975B460096CDDD /* LaunchScreen.storyboard in Resources */,
+				68C7BF6F279841890034BCB7 /* TwitterPostCell.xib in Resources */,
 				687D0DB927975B460096CDDD /* Assets.xcassets in Resources */,
 				687D0DB727975B3F0096CDDD /* Main.storyboard in Resources */,
 			);
@@ -207,8 +213,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				687D0DB427975B3F0096CDDD /* ViewController.swift in Sources */,
 				687D0DB027975B3F0096CDDD /* AppDelegate.swift in Sources */,
+				68C7BF6E279841890034BCB7 /* TwitterPostCell.swift in Sources */,
+				68C7BF68279763CE0034BCB7 /* TwitterTableViewController.swift in Sources */,
 				687D0DB227975B3F0096CDDD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
