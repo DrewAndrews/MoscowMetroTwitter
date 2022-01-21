@@ -15,6 +15,8 @@
 		68C7BF68279763CE0034BCB7 /* TwitterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C7BF66279763CE0034BCB7 /* TwitterTableViewController.swift */; };
 		68C7BF6E279841890034BCB7 /* TwitterPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C7BF6C279841890034BCB7 /* TwitterPostCell.swift */; };
 		68C7BF6F279841890034BCB7 /* TwitterPostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68C7BF6D279841890034BCB7 /* TwitterPostCell.xib */; };
+		68C7BF72279915490034BCB7 /* OfficialTwitterAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C7BF70279915490034BCB7 /* OfficialTwitterAccountCell.swift */; };
+		68C7BF73279915490034BCB7 /* OfficialTwitterAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68C7BF71279915490034BCB7 /* OfficialTwitterAccountCell.xib */; };
 		FE9E2F8BBC5BB663CA75BD1C /* Pods_MoscowMetroTwitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF6810DE8D80AF9300744BED /* Pods_MoscowMetroTwitter.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		68C7BF66279763CE0034BCB7 /* TwitterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterTableViewController.swift; sourceTree = "<group>"; };
 		68C7BF6C279841890034BCB7 /* TwitterPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterPostCell.swift; sourceTree = "<group>"; };
 		68C7BF6D279841890034BCB7 /* TwitterPostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwitterPostCell.xib; sourceTree = "<group>"; };
+		68C7BF70279915490034BCB7 /* OfficialTwitterAccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficialTwitterAccountCell.swift; sourceTree = "<group>"; };
+		68C7BF71279915490034BCB7 /* OfficialTwitterAccountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfficialTwitterAccountCell.xib; sourceTree = "<group>"; };
 		A19E5A6C5E1102DD31C2EF19 /* Pods-MoscowMetroTwitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoscowMetroTwitter.release.xcconfig"; path = "Target Support Files/Pods-MoscowMetroTwitter/Pods-MoscowMetroTwitter.release.xcconfig"; sourceTree = "<group>"; };
 		D20EBDFBE959E109D602D7D8 /* Pods-MoscowMetroTwitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoscowMetroTwitter.debug.xcconfig"; path = "Target Support Files/Pods-MoscowMetroTwitter/Pods-MoscowMetroTwitter.debug.xcconfig"; sourceTree = "<group>"; };
 		FF6810DE8D80AF9300744BED /* Pods_MoscowMetroTwitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoscowMetroTwitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +97,8 @@
 				687D0DBD27975B460096CDDD /* Info.plist */,
 				68C7BF6C279841890034BCB7 /* TwitterPostCell.swift */,
 				68C7BF6D279841890034BCB7 /* TwitterPostCell.xib */,
+				68C7BF70279915490034BCB7 /* OfficialTwitterAccountCell.swift */,
+				68C7BF71279915490034BCB7 /* OfficialTwitterAccountCell.xib */,
 			);
 			path = MoscowMetroTwitter;
 			sourceTree = "<group>";
@@ -159,6 +165,7 @@
 			files = (
 				687D0DBC27975B460096CDDD /* LaunchScreen.storyboard in Resources */,
 				68C7BF6F279841890034BCB7 /* TwitterPostCell.xib in Resources */,
+				68C7BF73279915490034BCB7 /* OfficialTwitterAccountCell.xib in Resources */,
 				687D0DB927975B460096CDDD /* Assets.xcassets in Resources */,
 				687D0DB727975B3F0096CDDD /* Main.storyboard in Resources */,
 			);
@@ -213,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68C7BF72279915490034BCB7 /* OfficialTwitterAccountCell.swift in Sources */,
 				687D0DB027975B3F0096CDDD /* AppDelegate.swift in Sources */,
 				68C7BF6E279841890034BCB7 /* TwitterPostCell.swift in Sources */,
 				68C7BF68279763CE0034BCB7 /* TwitterTableViewController.swift in Sources */,
@@ -374,6 +382,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -403,6 +412,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="112" id="KGk-i7-Jjw" customClass="OfficialTwitterAccountCell" customModule="MoscowMetroTwitter" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="112"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="335" height="112"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Московское метро" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3p-8i-wCx">
+                        <rect key="frame" x="16" y="12" width="182" height="24"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                        <color key="textColor" red="0.11372549019607843" green="0.63137254901960782" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verified_logo" translatesAutoresizingMaskIntoConstraints="NO" id="pXm-CU-hB6">
+                        <rect key="frame" x="203.5" y="15" width="15" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="BQS-SL-r3S"/>
+                            <constraint firstAttribute="height" constant="16" id="XZu-AG-x6q"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="CXm-em-Hgh">
+                        <rect key="frame" x="283" y="12" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="36" id="20s-fH-oT8"/>
+                            <constraint firstAttribute="height" constant="36" id="RFW-K8-xre"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@MetroOperativno" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crq-fH-m64">
+                        <rect key="frame" x="16" y="39" width="99" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Официальный твиттер-аккаунт Московского метрополитена по оперативному информированию о работе метро." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yy5-0R-l7T">
+                        <rect key="frame" x="16" y="65.5" width="303" height="21.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="CXm-em-Hgh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="7y9-6a-Y8o"/>
+                    <constraint firstAttribute="bottom" secondItem="Yy5-0R-l7T" secondAttribute="bottom" constant="25" id="Egh-Y0-brf"/>
+                    <constraint firstItem="S3p-8i-wCx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="LUm-Ig-SHP"/>
+                    <constraint firstItem="pXm-CU-hB6" firstAttribute="leading" secondItem="S3p-8i-wCx" secondAttribute="trailing" constant="5.5" id="YbY-kS-Tel"/>
+                    <constraint firstItem="crq-fH-m64" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ZBM-f0-lH7"/>
+                    <constraint firstAttribute="trailing" secondItem="Yy5-0R-l7T" secondAttribute="trailing" constant="16" id="aOO-h9-9Vz"/>
+                    <constraint firstItem="crq-fH-m64" firstAttribute="top" secondItem="S3p-8i-wCx" secondAttribute="bottom" constant="3" id="awu-1r-mWZ"/>
+                    <constraint firstAttribute="trailing" secondItem="CXm-em-Hgh" secondAttribute="trailing" constant="16" id="fKZ-TQ-3Je"/>
+                    <constraint firstItem="pXm-CU-hB6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="fmj-wn-rfx"/>
+                    <constraint firstItem="S3p-8i-wCx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="gjp-wy-3ec"/>
+                    <constraint firstItem="Yy5-0R-l7T" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="hmB-iP-Ihz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="moscowMetroLabel" destination="S3p-8i-wCx" id="Sb1-B8-DFc"/>
+                <outlet property="moscowMetroLogo" destination="CXm-em-Hgh" id="iAP-AB-0dz"/>
+                <outlet property="officialTextLabel" destination="Yy5-0R-l7T" id="Sdj-Aw-RnE"/>
+                <outlet property="twitterAliasLabel" destination="crq-fH-m64" id="7zS-cS-BKl"/>
+                <outlet property="verifiedLogoImage" destination="pXm-CU-hB6" id="Odn-TB-l6o"/>
+            </connections>
+            <point key="canvasLocation" x="138.40579710144928" y="77.678571428571431"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="logo" width="400" height="400"/>
+        <image name="verified_logo" width="480" height="480"/>
+    </resources>
+</document>

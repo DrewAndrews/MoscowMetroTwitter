@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class TwitterPostCell: UITableViewCell {
 
@@ -26,9 +27,15 @@ class TwitterPostCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    func fillCell(post: JSON) {
+        postTextLabel.text = post["text"].string
+        commentsCountLabel.text = "0"
+        retweetCountLabel.text = String(post["retweetCount"].intValue)
+        favoriteCountLabel.text = String(post["favoriteCount"].intValue)
+    }
+    
     private func configureCell() {
         logoImage.layer.cornerRadius = 20
         twitterAliasLabel.textColor = .gray
-        postTextLabel.text = "Движение на Солнцевской линии (8А) вводится в график."
     }
 }
