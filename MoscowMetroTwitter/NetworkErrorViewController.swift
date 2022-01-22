@@ -17,7 +17,7 @@ class NetworkErrorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationController?.title = "Новости"
+        self.title = "Новости"
         self.navigationItem.setHidesBackButton(true, animated: true)
         
         retryButton.layer.cornerRadius = 8

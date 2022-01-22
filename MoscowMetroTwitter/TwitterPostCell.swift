@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftyJSON
+import SwiftDate
 
 class TwitterPostCell: UITableViewCell {
 
@@ -17,6 +18,7 @@ class TwitterPostCell: UITableViewCell {
     @IBOutlet weak var commentsCountLabel: UILabel!
     @IBOutlet weak var retweetCountLabel: UILabel!
     @IBOutlet weak var favoriteCountLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,6 +34,11 @@ class TwitterPostCell: UITableViewCell {
         commentsCountLabel.text = "0"
         retweetCountLabel.text = String(post["retweetCount"].intValue)
         favoriteCountLabel.text = String(post["favoriteCount"].intValue)
+        
+        let regionMS = Region(calendar: Calendar(identifier: .gregorian), zone: Zones.europeMoscow, locale: Locales.russian)
+        let date = DateInRegion(milliseconds: post["createdAt"].int!, region: regionMS)
+        
+        dateLabel.text = "\(date.toFormat("dd.MM HH:mm", locale: Locales.russian))"
     }
     
     private func configureCell() {

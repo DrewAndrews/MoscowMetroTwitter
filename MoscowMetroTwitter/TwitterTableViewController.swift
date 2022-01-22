@@ -12,7 +12,6 @@ import SafariServices
 class TwitterTableViewController: UITableViewController {
     
     var posts: [JSON] = []
-    
     var spinner = UIActivityIndicatorView(style: .medium)
     
     override func viewDidLoad() {

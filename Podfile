@@ -8,5 +8,6 @@ target 'MoscowMetroTwitter' do
   # Pods for MoscowMetroTwitter
   pod 'SwiftyJSON', '~> 4.0'
   pod 'SDWebImage', '~> 5.0'
+  pod 'SwiftDate', '~> 5.0'
 
 end

@@ -29,7 +29,7 @@
                         <constraint firstAttribute="width" secondItem="wVy-nD-zuE" secondAttribute="height" multiplier="1:1" id="L45-aJ-3Th"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ошибка" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZd-TK-qsB">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ошибка" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZd-TK-qsB">
                     <rect key="frame" x="20" y="366" width="374" height="24"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="ZZd-TK-qsB" secondAttribute="height" multiplier="187:12" id="BmM-7R-fcg"/>
