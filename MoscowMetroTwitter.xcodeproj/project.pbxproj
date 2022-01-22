@@ -94,6 +94,8 @@
 		687D0DAE27975B3F0096CDDD /* MoscowMetroTwitter */ = {
 			isa = PBXGroup;
 			children = (
+				68E131D8279BE9F5009B052B /* Views */,
+				68E131D7279BE9DE009B052B /* Utils */,
 				687D0DAF27975B3F0096CDDD /* AppDelegate.swift */,
 				687D0DB127975B3F0096CDDD /* SceneDelegate.swift */,
 				68C7BF66279763CE0034BCB7 /* TwitterTableViewController.swift */,
@@ -102,14 +104,28 @@
 				687D0DBA27975B460096CDDD /* LaunchScreen.storyboard */,
 				687D0DBD27975B460096CDDD /* Info.plist */,
 				68C7BF6C279841890034BCB7 /* TwitterPostCell.swift */,
-				68C7BF6D279841890034BCB7 /* TwitterPostCell.xib */,
 				68C7BF70279915490034BCB7 /* OfficialTwitterAccountCell.swift */,
-				68C7BF71279915490034BCB7 /* OfficialTwitterAccountCell.xib */,
-				6854E739279ACD8F000D0445 /* NetworkMontitor.swift */,
 				68468972279BCB7B003C8903 /* NetworkErrorViewController.swift */,
-				68468973279BCB7B003C8903 /* NetworkErrorViewController.xib */,
 			);
 			path = MoscowMetroTwitter;
+			sourceTree = "<group>";
+		};
+		68E131D7279BE9DE009B052B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6854E739279ACD8F000D0445 /* NetworkMontitor.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		68E131D8279BE9F5009B052B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				68C7BF6D279841890034BCB7 /* TwitterPostCell.xib */,
+				68C7BF71279915490034BCB7 /* OfficialTwitterAccountCell.xib */,
+				68468973279BCB7B003C8903 /* NetworkErrorViewController.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

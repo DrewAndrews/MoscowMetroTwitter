@@ -14,6 +14,29 @@ class TwitterTableViewController: UITableViewController {
     var posts: [JSON] = []
     var spinner = UIActivityIndicatorView(style: .medium)
     
+    enum Props {
+        case loading
+        case error
+        case loaded(data: [JSON])
+    }
+    
+    var props: Props = .loading {
+        willSet {
+            switch newValue {
+            case .loading:
+                spinner.startAnimating()
+                loadPosts()
+            case .error:
+                let networkErrorViewController = NetworkErrorViewController(nibName: "NetworkErrorViewController", bundle: .main)
+                self.navigationController?.pushViewController(networkErrorViewController, animated: true)
+            case .loaded(let data):
+                spinner.stopAnimating()
+                self.posts = data
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,11 +51,9 @@ class TwitterTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         if !NetworkMonitor.shared.isConnected {
-            let networkErrorViewController = NetworkErrorViewController(nibName: "NetworkErrorViewController", bundle: .main)
-            self.navigationController?.pushViewController(networkErrorViewController, animated: true)
+            props = .error
         } else {
-            spinner.startAnimating()
-            loadPosts()
+            props = .loading
         }
     }
     
@@ -75,27 +96,15 @@ class TwitterTableViewController: UITableViewController {
         self.present(safari, animated: true)
     }
     
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if posts.count != 0 {
-            spinner.stopAnimating()
-        }
-    }
-    
-    
     //MARK: - Network
     
     func loadPosts() {
         let url = URL(string: "https://devapp.mosmetro.ru/api/tweets/v1.0/")!
         
         URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                print(error)
-            }
-            
             if let rawData = data, let data = try? JSON(data: rawData)["data"].array {
                 DispatchQueue.main.async {
-                    self.posts = data
-                    self.tableView.reloadData()
+                    self.props = .loaded(data: data)
                 }
             }
         }.resume()
