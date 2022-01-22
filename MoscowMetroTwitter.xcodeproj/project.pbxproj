@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68468974279BCB7B003C8903 /* NetworkErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68468972279BCB7B003C8903 /* NetworkErrorViewController.swift */; };
+		68468975279BCB7B003C8903 /* NetworkErrorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68468973279BCB7B003C8903 /* NetworkErrorViewController.xib */; };
+		6854E73A279ACD8F000D0445 /* NetworkMontitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6854E739279ACD8F000D0445 /* NetworkMontitor.swift */; };
 		687D0DB027975B3F0096CDDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687D0DAF27975B3F0096CDDD /* AppDelegate.swift */; };
 		687D0DB227975B3F0096CDDD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687D0DB127975B3F0096CDDD /* SceneDelegate.swift */; };
 		687D0DB727975B3F0096CDDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687D0DB527975B3F0096CDDD /* Main.storyboard */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		68468972279BCB7B003C8903 /* NetworkErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorViewController.swift; sourceTree = "<group>"; };
+		68468973279BCB7B003C8903 /* NetworkErrorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NetworkErrorViewController.xib; sourceTree = "<group>"; };
+		6854E739279ACD8F000D0445 /* NetworkMontitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMontitor.swift; sourceTree = "<group>"; };
 		687D0DAC27975B3F0096CDDD /* MoscowMetroTwitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoscowMetroTwitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		687D0DAF27975B3F0096CDDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		687D0DB127975B3F0096CDDD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +105,9 @@
 				68C7BF6D279841890034BCB7 /* TwitterPostCell.xib */,
 				68C7BF70279915490034BCB7 /* OfficialTwitterAccountCell.swift */,
 				68C7BF71279915490034BCB7 /* OfficialTwitterAccountCell.xib */,
+				6854E739279ACD8F000D0445 /* NetworkMontitor.swift */,
+				68468972279BCB7B003C8903 /* NetworkErrorViewController.swift */,
+				68468973279BCB7B003C8903 /* NetworkErrorViewController.xib */,
 			);
 			path = MoscowMetroTwitter;
 			sourceTree = "<group>";
@@ -165,6 +174,7 @@
 			files = (
 				687D0DBC27975B460096CDDD /* LaunchScreen.storyboard in Resources */,
 				68C7BF6F279841890034BCB7 /* TwitterPostCell.xib in Resources */,
+				68468975279BCB7B003C8903 /* NetworkErrorViewController.xib in Resources */,
 				68C7BF73279915490034BCB7 /* OfficialTwitterAccountCell.xib in Resources */,
 				687D0DB927975B460096CDDD /* Assets.xcassets in Resources */,
 				687D0DB727975B3F0096CDDD /* Main.storyboard in Resources */,
@@ -220,9 +230,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6854E73A279ACD8F000D0445 /* NetworkMontitor.swift in Sources */,
 				68C7BF72279915490034BCB7 /* OfficialTwitterAccountCell.swift in Sources */,
 				687D0DB027975B3F0096CDDD /* AppDelegate.swift in Sources */,
 				68C7BF6E279841890034BCB7 /* TwitterPostCell.swift in Sources */,
+				68468974279BCB7B003C8903 /* NetworkErrorViewController.swift in Sources */,
 				68C7BF68279763CE0034BCB7 /* TwitterTableViewController.swift in Sources */,
 				687D0DB227975B3F0096CDDD /* SceneDelegate.swift in Sources */,
 			);

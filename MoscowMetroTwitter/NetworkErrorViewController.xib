@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NetworkErrorViewController" customModule="MoscowMetroTwitter" customModuleProvider="target">
+            <connections>
+                <outlet property="crossImage" destination="wVy-nD-zuE" id="eLZ-TA-4eK"/>
+                <outlet property="descriptionLabel" destination="dNd-XV-uOL" id="EBF-O3-TAB"/>
+                <outlet property="retryButton" destination="rZk-Cs-kjn" id="6ny-FD-4DV"/>
+                <outlet property="titleLabel" destination="ZZd-TK-qsB" id="CER-4H-qxh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redcross" translatesAutoresizingMaskIntoConstraints="NO" id="wVy-nD-zuE">
+                    <rect key="frame" x="147" y="206" width="119" height="119"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="wVy-nD-zuE" secondAttribute="height" multiplier="1:1" id="L45-aJ-3Th"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ошибка" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZd-TK-qsB">
+                    <rect key="frame" x="20" y="366" width="374" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ZZd-TK-qsB" secondAttribute="height" multiplier="187:12" id="BmM-7R-fcg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Не удалось подключиться к серверу. Проверьте ваше интернет соединение и попробуйте еще раз." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNd-XV-uOL">
+                    <rect key="frame" x="20" y="410" width="374" height="61"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZk-Cs-kjn">
+                    <rect key="frame" x="48" y="509" width="318" height="50"/>
+                    <color key="backgroundColor" red="0.98039215690000003" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="rZk-Cs-kjn" secondAttribute="height" multiplier="159:25" id="kNJ-zi-SPA"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Попробовать снова">
+                        <color key="baseForegroundColor" red="0.85490196080000003" green="0.12549019610000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="retry:" destination="-1" eventType="touchUpInside" id="n7K-MU-hyT"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="dNd-XV-uOL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="0bg-fF-BKt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZZd-TK-qsB" secondAttribute="trailing" constant="20" id="4DT-gh-hBu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dNd-XV-uOL" secondAttribute="trailing" constant="20" id="BAh-Sk-vNH"/>
+                <constraint firstItem="rZk-Cs-kjn" firstAttribute="top" secondItem="dNd-XV-uOL" secondAttribute="bottom" constant="38" id="Hca-Kx-ePj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rZk-Cs-kjn" secondAttribute="trailing" constant="48" id="JKb-fb-KAe"/>
+                <constraint firstItem="ZZd-TK-qsB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="RY0-Ig-bKW"/>
+                <constraint firstItem="rZk-Cs-kjn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="48" id="WHN-ah-6YW"/>
+                <constraint firstItem="dNd-XV-uOL" firstAttribute="top" secondItem="ZZd-TK-qsB" secondAttribute="bottom" constant="20" id="d9D-Yn-e6G"/>
+                <constraint firstItem="wVy-nD-zuE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="147" id="rEs-pD-ojD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wVy-nD-zuE" secondAttribute="trailing" constant="148" id="sFN-BY-mXP"/>
+                <constraint firstItem="wVy-nD-zuE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="162" id="uaV-6o-yp0"/>
+                <constraint firstItem="ZZd-TK-qsB" firstAttribute="top" secondItem="wVy-nD-zuE" secondAttribute="bottom" constant="41" id="x7V-kd-uiJ"/>
+            </constraints>
+            <point key="canvasLocation" x="279.71014492753625" y="22.767857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="redcross" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

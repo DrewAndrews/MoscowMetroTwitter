@@ -12,28 +12,45 @@ import SafariServices
 class TwitterTableViewController: UITableViewController {
     
     var posts: [JSON] = []
-        
+    
+    var spinner = UIActivityIndicatorView(style: .medium)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadPosts()
-
+        spinner.center = view.center
+        spinner.hidesWhenStopped = true
+        tableView.addSubview(spinner)
+        
         self.tableView.separatorStyle = .none
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if !NetworkMonitor.shared.isConnected {
+            let networkErrorViewController = NetworkErrorViewController(nibName: "NetworkErrorViewController", bundle: .main)
+            self.navigationController?.pushViewController(networkErrorViewController, animated: true)
+        } else {
+            spinner.startAnimating()
+            loadPosts()
+        }
+    }
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = Bundle.main.loadNibNamed("OfficialTwitterAccountCell", owner: self, options: nil)?.first as! OfficialTwitterAccountCell
+            cell.isUserInteractionEnabled = false
             return cell
         } else {
             let cell = Bundle.main.loadNibNamed("TwitterPostCell", owner: self, options: nil)?.first as! TwitterPostCell
@@ -48,13 +65,21 @@ class TwitterTableViewController: UITableViewController {
         }
         return UITableView.automaticDimension
     }
-
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.row != 0 else { return }
+        
         let id = posts[indexPath.row]["id"].intValue
         let url = URL(string: "https://mobile.twitter.com/MetroOperativno/status/\(id)")!
         
         let safari = SFSafariViewController(url: url)
         self.present(safari, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if posts.count != 0 {
+            spinner.stopAnimating()
+        }
     }
     
     
