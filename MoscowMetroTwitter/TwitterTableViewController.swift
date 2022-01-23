@@ -40,6 +40,12 @@ class TwitterTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let nibForTwitterPost = UINib(nibName: "TwitterPostCell", bundle: nil)
+        let nibForOfficialTwitter = UINib(nibName: "OfficialTwitterAccountCell", bundle: nil)
+        
+        tableView.register(nibForTwitterPost, forCellReuseIdentifier: "TwitterPostCell")
+        tableView.register(nibForOfficialTwitter, forCellReuseIdentifier: "OfficialAccountCellId")
+        
         spinner.center = view.center
         spinner.hidesWhenStopped = true
         tableView.addSubview(spinner)
@@ -69,11 +75,11 @@ class TwitterTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            let cell = Bundle.main.loadNibNamed("OfficialTwitterAccountCell", owner: self, options: nil)?.first as! OfficialTwitterAccountCell
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "OfficialAccountCellId") as? OfficialTwitterAccountCell else { return UITableViewCell() }
             cell.isUserInteractionEnabled = false
             return cell
         } else {
-            let cell = Bundle.main.loadNibNamed("TwitterPostCell", owner: self, options: nil)?.first as! TwitterPostCell
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "TwitterPostCell") as? TwitterPostCell else { return UITableViewCell() }
             cell.fillCell(post: posts[indexPath.row])
             return cell
         }
